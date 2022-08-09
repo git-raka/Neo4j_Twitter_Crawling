@@ -16,9 +16,6 @@ YIELD value
 RETURN value.data
 
 
-========================================================================================================================
-
-
 ## RETWEET
 WITH apoc.static.getAll("twitter") AS twitter
 CALL apoc.load.jsonParams(
@@ -29,10 +26,10 @@ CALL apoc.load.jsonParams(
 YIELD value
 RETURN value
 
-========================================================================================================================
 
 
-## FOLLOWING###
+
+## FOLLOWING
 WITH apoc.static.getAll("twitter") AS twitter
 
 CALL apoc.load.jsonParams(
