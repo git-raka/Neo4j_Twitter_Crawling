@@ -4,8 +4,9 @@
 get following from cypher neo4j
 
 
-###FOLLOWING###
+## FOLLOWING
 WITH apoc.static.getAll("twitter") AS twitter
+
 CALL apoc.load.jsonParams(
   twitter.user2 + "107886941/following?user.fields=created_at&expansions=pinned_tweet_id&tweet.fields=created_at",
   {Authorization:"Bearer "+twitter.bearer},
@@ -18,7 +19,7 @@ RETURN value.data
 ========================================================================================================================
 
 
-###RETWEET###
+## RETWEET
 WITH apoc.static.getAll("twitter") AS twitter
 CALL apoc.load.jsonParams(
   twitter.retweet + "1543998368040435712/retweeted_by?user.fields=created_at&expansions=pinned_tweet_id&tweet.fields=created_at",
@@ -31,8 +32,9 @@ RETURN value
 ========================================================================================================================
 
 
-###FOLLOWING###
+## FOLLOWING###
 WITH apoc.static.getAll("twitter") AS twitter
+
 CALL apoc.load.jsonParams(
   twitter.user2 + "107886941/following?user.fields=created_at&expansions=pinned_tweet_id&tweet.fields=created_at",
   {Authorization:"Bearer "+twitter.bearer},
